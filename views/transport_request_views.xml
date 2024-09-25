@@ -11,7 +11,7 @@
                         <field name="sender_id"/>
                         <field name="receiver_id"/>
                         <field name="responsible_manager_id"/>
-                        <field name="state" widget="statusbar"/>
+                        <field name="status" widget="statusbar"/>
                         <field name="package_type_id"/>
                         <field name="package_qty"/>
                         <field name="priority_id"/>
@@ -27,8 +27,9 @@
                     </notebook>
                 </sheet>
                 <footer>
-                    <button name="action_confirm" type="object" string="Confirm" class="btn-primary" states="draft"/>
-                    <button name="action_cancel" type="object" string="Cancel" class="btn-secondary" states="confirmed"/>
+                    <!-- Аттрибут states в 17 оду не поддерживается -->
+                    <button name="action_confirm" type="object" string="Confirm" class="btn-primary" />
+                    <button name="action_cancel" type="object" string="Cancel" class="btn-secondary"/>
                 </footer>
             </form>
         </field>
@@ -40,6 +41,5 @@
         <field name="view_mode">tree,form,kanban</field>
     </record>
 
-    <menuitem id="menu_logistics_transport_requests" parent="menu_logistics_root" name="Transport Requests" action="action_transport_request"/>
 </odoo>
 

@@ -33,5 +33,4 @@
     </record>
 
     
-    <menuitem id="menu_logistics_expense_category" parent="menu_logistics_configuration" name="Expense Categories" action="action_expense_category"/>
 </odoo>

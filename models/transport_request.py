@@ -16,14 +16,12 @@ class TransportRequest(models.Model):
     total_weight = fields.Float(string='Total Weight')
     total_volume = fields.Float(string='Total Volume')
 
-    @api.multi
     def action_confirm(self):
         self.ensure_one()
         # Логика для подтверждения запроса
         self.status = 'confirmed'  
         return True
 
-    @api.multi
     def action_cancel(self):
         self.ensure_one()
         # Логика для отмены запроса
