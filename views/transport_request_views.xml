@@ -15,16 +15,10 @@
                         <field name="package_type_id"/>
                         <field name="package_qty"/>
                         <field name="priority_id"/>
+                        <field name="total_weight"/>
+                        <field name="total_volume"/>
+                        <field name="expense_category_id"/>
                     </group>
-                    <group>
-                        <field name="total_weight" readonly="1"/>
-                        <field name="total_volume" readonly="1"/>
-                    </group>
-                    <notebook>
-                        <page string="Items">
-                            <!-- Удалено line_ids и связанные поля -->
-                        </page>
-                    </notebook>
                 </sheet>
                 <footer>
                     <!-- Аттрибут states в 17 оду не поддерживается -->
@@ -35,11 +29,21 @@
         </field>
     </record>
 
-    <record id="action_transport_request" model="ir.actions.act_window">
-        <field name="name">Transport Requests</field>
-        <field name="res_model">logistics.transport_request</field>
-        <field name="view_mode">tree,form,kanban</field>
+    <record id="view_transport_request_tree" model="ir.ui.view">
+        <field name="name">transport.request.tree</field>
+        <field name="model">logistics.transport_request</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="request_type_id"/>
+                <field name="sender_name"/>
+                <field name="receiver_name"/>
+                <field name="state"/>
+            </tree>
+        </field>
     </record>
+<<<<<<< HEAD
 
+=======
+>>>>>>> new_try
 </odoo>
-

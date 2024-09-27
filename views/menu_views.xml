@@ -1,5 +1,4 @@
 <odoo>
-   
     <menuitem id="menu_logistics_root" name="Logistics" sequence="1"/>
 
     
@@ -22,4 +21,7 @@
 
 
 
+    <menuitem id="menu_transport_requests" parent="menu_logistics_root" name="Transport Requests" action="action_transport_request" sequence="2"/>
+    <menuitem id="menu_logistics_configuration" parent="menu_logistics_root" name="Configuration" sequence="10"/>
+    <menuitem id="menu_request_types" parent="menu_logistics_configuration" name="Request Types" action="action_request_type"/>
 </odoo>

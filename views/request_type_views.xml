@@ -1,20 +1,16 @@
 <odoo>
-    
     <record id="view_request_type_form" model="ir.ui.view">
         <field name="name">request.type.form</field>
         <field name="model">logistics.request_type</field>
         <field name="arch" type="xml">
             <form string="Request Type">
                 <sheet>
-                    <group>
-                        <field name="name"/>
-                    </group>
+                    <field name="name"/>
                 </sheet>
             </form>
         </field>
     </record>
 
-    
     <record id="view_request_type_tree" model="ir.ui.view">
         <field name="name">request.type.tree</field>
         <field name="model">logistics.request_type</field>
@@ -25,7 +21,8 @@
         </field>
     </record>
 
-    
+    <menuitem id="menu_request_type" parent="menu_logistics_configuration" name="Request Types" action="action_request_type"/>
+
     <record id="action_request_type" model="ir.actions.act_window">
         <field name="name">Request Types</field>
         <field name="res_model">logistics.request_type</field>
