@@ -9,11 +9,13 @@
     'category': 'Logistics',
     'depends': ['base', 'sale', 'hr', 'stock'],
     'data': [
+        'views/menu_views.xml'
         'security/ir.model.access.csv',
         'views/transport_request_views.xml',
         'views/request_type_views.xml',
-        'views/menu_views.xml'
-
+        'views/priority_type_views.xml',
+        'views/packaging_type_views.xml',
+        'views/expense_category_views.xml',
     ],
     'installable': True,
     'application': True,

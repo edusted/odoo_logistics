@@ -5,7 +5,7 @@ class TransportRequest(models.Model):
     _description = 'Transport Request'
 
     name = fields.Char(string='Request Name', required=True)
-    request_type_id = fields.Many2one('logistics.request_type', string='Request Type')  
+    request_type = fields.Many2one('logistics.request_type', string='Request Type')  
     sender_name = fields.Char(string='Sender Name')  
     sender_contact = fields.Char(string='Sender Contact')  
     receiver_name = fields.Char(string='Receiver Name')  
